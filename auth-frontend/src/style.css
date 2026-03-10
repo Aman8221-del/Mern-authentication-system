@@ -1,0 +1,52 @@
+
+.form{   
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding:30px 40px;
+  box-shadow: 0px 0px 10px gray;
+  border-radius: 10px;
+  justify-self: center;
+  margin-top: 25vmin;
+}
+
+.form h2{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form label{
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.form input{
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.login-form label{
+  margin-top: 30px;
+}
+
+.login-form button{
+  margin: 30px 0px 10px;
+}
+
+form button{
+  margin: 20px 0px;
+  padding: 8px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+} 
+
+form .a{
+  padding: 10px 0px 0px;
+    color: blue;
+    text-decoration: none;
+    text-align: center;
+}

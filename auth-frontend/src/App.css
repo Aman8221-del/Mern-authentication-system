@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.nav{
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  align-items: center;
+}
+
+
+.buttons{
+  display: flex;
+  gap: 20px;
+}
+
+.buttons button{
+  font-size: 18px;
+  padding: 5px 20px;
+  border-radius: 8px;
+  background-color: rgb(7, 7, 181);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons button:hover{
+  background-color: #ffff;
+  color: blue;
+  
+}
