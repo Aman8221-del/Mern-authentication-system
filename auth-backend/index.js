@@ -12,8 +12,6 @@ app.listen("1000", (res, req) => {
   console.log("server started at 1000");
 });
 
-const controller = require("./controllers/controllers");
+const router=require("./Routes/Route")
 
-app.post("/signup", controller.createuser);
-
-app.post("/login", controller.loginuser)
+app.use("/", router)

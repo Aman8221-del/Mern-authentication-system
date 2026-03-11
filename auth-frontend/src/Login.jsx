@@ -16,10 +16,10 @@ const Login = () => {
       });
 
       localStorage.setItem("token", res.data.token);
-      alert("login successfully");
+      alert(res.data.message);
       window.location = "/dashboard";
     } catch (error) {
-      alert("invalid user");
+      alert(error.response.data.message);
       window.location = "/login";
     }
   };
