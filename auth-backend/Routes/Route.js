@@ -49,6 +49,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
+
 router.put("/update/:id", async (req, res)=>{
   try {
     const userid=req.params.id
@@ -63,6 +64,22 @@ router.put("/update/:id", async (req, res)=>{
     }
     res.status(200).json({message:"data updated successfully", response})
   } catch (error) {
+    console.log(error)
+    res.status(500).json({message:"Internal server error"})
+  }
+})
+
+router.delete("/delete/:id", async (req, res)=>{
+  try {
+     const userid=req.params.id
+
+     const response=await model.findByIdAndDelete(userid)
+     if(!response){
+      res.status(404).json({message:"user not found"})
+     }
+     console.log("deleted")
+     res.status(200).json({message:"user Deleted", response})
+  } catch (error) { 
     console.log(error)
     res.status(500).json({message:"Internal server error"})
   }
