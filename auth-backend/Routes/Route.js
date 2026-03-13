@@ -7,8 +7,9 @@ const bcrypt=require("bcrypt")
 router.post("/signup", async (req, res) => {
   try {
     const data = req.body;
-    const existinguser = await model.findOne({ email: data.email });
-    if (existinguser) {
+    const existingemail = await model.findOne({ email: data.email });
+
+    if (existingemail) {
       return res.status(400).json({ message: "email already used" });
     }
 
